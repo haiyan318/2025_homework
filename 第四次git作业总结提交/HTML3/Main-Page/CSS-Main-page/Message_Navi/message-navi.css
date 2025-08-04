@@ -1,0 +1,134 @@
+/* 外层区域 */
+.Message-Navigation {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 背景图全宽撑满，保持比例 */
+.Message_Navigation_bg {
+  width: 100%;
+  height: 24rem;
+  display: block;
+}
+
+/* 标题文字 */
+.Message-Navigation-title {
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.Message-Navigation-title .title-msg {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 图标区域：使用 wrap 适配不同屏幕 */
+.message-item {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* 允许换行 */
+  width: 100%;
+  z-index: 2;
+  gap: 3rem; /* 改为相对小一点的 gap，避免超出 */
+  padding: 0 1rem; /* 增加内边距防止靠边 */
+  box-sizing: border-box;
+}
+
+/* 每个 icon 区块：适应不同屏幕宽度 */
+.message-item > div {
+  flex: 1 1 200px;  /* 最小宽度 200px，自动换行 */
+  max-width: 240px;
+  text-align: center;
+}
+
+/* a 链接样式 */
+.message-item a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 外层圆环容器：用 vw 进行响应式缩放 */
+.icon-wrapper {
+  width: 20vw;
+  height: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 2px dashed white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+
+/* 给每个 SVG 添加相对定位 */
+.icon_message {
+  position: relative;
+  width: 100px;               /* 图标大小 */
+  height: 100px;
+  z-index: 1;
+}
+
+/* 遮罩层：蓝色微透明矩形 */
+.icon_message::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 51, 100, 0.45); /* 蓝色，alpha 25% */
+  z-index: 1;
+  pointer-events: none; /* 这句确保遮罩不会阻止文字交互 */
+}
+
+
+/* icon 下方文字 */
+.icon_message_info {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* 动态实心圆的样式 */
+.pulse-circle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  z-index: 0; /* 图层低于 icon */
+  transition: transform 0.6s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+}
+
+.pulse-circle.active {
+  width: 160px; /* 最终圆的大小 */
+  height: 160px;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .icon-wrapper {
+    width: 30vw;
+    height: 30vw;
+  }
+}

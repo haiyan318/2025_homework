@@ -1,0 +1,65 @@
+/* 外层 footer 布局容器 */
+.footer-navigation {
+  background-color: rgb(4, 42, 89);
+  padding: 5px 0; /* 控制上下间距 */
+}
+
+/* ul 使用 flex 布局均分 li */
+.footer-navi-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 25rem;
+}
+
+/* 每个 li 项统一宽度并居中 */
+.footer-navi-item-li {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.footer-navi-item-info {
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-family: fangsong;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.footer-navi-item-info-o {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+
+/* 悬浮动画不影响布局：使用 transform 实现浮动效果 */
+.footer-navi-item-li:hover .footer-navi-item-info {
+  color: #007bff; /* 悬浮文字变色 */
+  transform: translateY(-5px); /* 向上浮动 */
+}
+
+/* 去除默认链接样式 */
+.footer-navi-item-a {
+  text-decoration: none;
+}
+
+/* 悬浮时链接本身可自定义色（如背景或边框变化也可添加） */
+.footer-navi-item-a:hover {
+  /* 下面可根据需要添加悬浮背景等 */
+  /* background-color: #e6f2ff; */
+}

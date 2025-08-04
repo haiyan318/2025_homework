@@ -1,0 +1,141 @@
+/* 右侧区域整体 */
+.info-right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 标题行：改为 flex 居中，禁止换行，并固定高度 */
+.right-title {
+    width: 80%;
+    display: flex;
+    justify-content: center;    /* 水平居中 */
+    align-items: center;        /* 垂直居中 */
+    white-space: nowrap;        /* 禁止自动换行 */
+    background-color: rgb(25, 89, 167);   /* 深蓝色 */
+    border-radius: 12px;         /* 固定 px 圆角 */
+    height: 3.5rem;                /* 根据需要调整总高度 */
+    padding: 0 1rem;             /* 左右留一点内边距 */
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+/* 标题文字：去掉额外的 padding/margin，保证在同一行 */
+.right-title .title-first {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.25rem;
+    margin: 0;                   /* 去除默认 margin */
+    line-height: 1;              /* 确保文字垂直居中 */
+}
+
+/* 办事指南模块大正方形外框（无边框，仅为了保持正方形比例） */
+.right-notice {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;         /* 四个单元格自动保持正方形 */
+    gap: 1rem;
+    width: 80%;                  /* 与标题同宽 */
+    aspect-ratio: 1 / 1;         /* 保持大容器正方形 */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+/* 小单元格：改为使用 em 单位，随字体缩放自动调整 */
+.right-notice-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.1em solid #ccc;        /* 改为相对单位，避免边框太粗 */
+  padding: 0.5em;
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+/* 图标尺寸也用 em，相对容器自然缩放 */
+.right-notice-item-img {
+  width: 4em;
+  height: 4em;
+  object-fit: contain;
+  margin-bottom: 0.5em;
+  border-radius: 0.6em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 文字样式 */
+.right-notice-item-info {
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+}
+
+
+/* 覆盖所有链接状态的下划线 */
+.right-notice-item  {
+  text-decoration: none !important;  /* 去掉下划线 */
+  color: #000 !important;            /* 纯黑色文字 */
+  font-weight: bold !important;      /* 加粗（“黑体”效果） */
+  font-family: "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+}
+
+.right-notice-item-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* 向左上角凸出 + 放大效果 */
+.right-notice-item-img.hover-top-left {
+  transform: translate(-10px, -10px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 向右上角凸出 + 放大效果 */
+.right-notice-item-img.hover-top-right {
+  transform: translate(10px, -10px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 向左下角凸出 + 放大效果 */
+.right-notice-item-img.hover-bottom-left {
+  transform: translate(-10px, 10px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 向右下角凸出 + 放大效果 */
+.right-notice-item-img.hover-bottom-right {
+  transform: translate(10px, 10px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.right-notice-item {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.right-notice-item-img,
+.right-notice-item-info {
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .right-notice {
+    grid-template-columns: 1fr 1fr;      /* 或 1列：1fr */
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .right-notice-item-img {
+    width: 3em;
+    height: 3em;
+  }
+
+  .right-notice-item-info {
+    font-size: 0.9em;
+  }
+}

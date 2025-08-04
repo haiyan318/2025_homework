@@ -1,0 +1,102 @@
+/* 导航栏整体 */
+.nav-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9rem;
+  padding: 1rem 2rem;           /* 上下 1rem，左右 2rem */
+  background-color: #fff;       /* 如需半透明可改为 rgba(255,255,255,0.8) */
+  overflow: hidden;             /* 隐藏背景图溢出 */
+}
+
+/* 背景图（铺满整个导航栏） */
+.nav-img-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;                   /* 置于底层 */
+  overflow: hidden;    /* 保证伪元素不外露 */
+}
+/* 2. 用 ::after 叠加一个半透明蓝色层 */
+.nav-img-bg::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(20, 51, 100, 0.45); /* 蓝色，alpha 25% */
+  pointer-events: none;  /* 不阻塞鼠标事件 */
+  z-index: 1;
+}
+.nav-img-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* 保持比例裁剪填满 */
+}
+/* 3. 把 logo 和搜索框的层级再提高一点，避免被遮罩遮住 */
+.nav-img-logo,
+.nav-bar-searchbtn {
+  position: relative; /* 确保能被 z-index 识别 */
+  z-index: 2;
+}
+/* 左侧 Logo 容器 */
+.nav-img-logo {
+  position: relative;
+  z-index: 1;                   /* 高于背景图 */
+  left: 6rem;
+  flex: 0 0 auto;               /* 固定大小，不拉伸 */
+}
+.nav-img-logo .nav-bar-logo {
+  display: block;
+  height: 6rem;                 /* 5rem 高度，根据需要调整 */
+  width: auto;                  /* 宽度自适应 */
+}
+
+/* 右侧搜索区 */
+.nav-bar-searchbtn {
+  right: 6rem;
+  position: relative;
+  z-index: 1;                   /* 高于背景图 */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;                  /* 输入框和按钮间距 */
+  flex: 0 0 auto;
+}
+
+/* 搜索输入框 */
+.search-input {
+  font-size: 1rem;              /* 1rem = 根字体大小 */
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  width: 12rem;                 /* 可根据需求调整或用百分比 */
+  transition: border-color 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* 搜索按钮 */
+.search-button {
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* 4. 200% 缩放时隐藏 */
+@media screen and (min-resolution: 2.5dppx) {
+  .Navigation-Dropdown-Menu {
+    display: none !important;
+  }
+}

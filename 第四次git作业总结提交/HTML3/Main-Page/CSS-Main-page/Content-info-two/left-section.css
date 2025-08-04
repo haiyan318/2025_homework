@@ -1,0 +1,126 @@
+/* ===== 2. 左侧区域 ===== */
+.info-left-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* 水平居中整个模块内容 */
+    border: 1px solid rgb(233, 233, 233);
+
+}
+
+.left-title {
+  position: relative;            /* 变成定位容器 */
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;      /* 水平居中前两段文字 */
+  align-items: center;          /* 垂直居中 */
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* 把 “更多” 脱离文档流，固定在右侧内边距位置 */
+.title-more {
+  position: absolute;
+  right: 1rem;                  /* 距离右边 1rem */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* 前两段文字正常排列，不要再用 margin-right: auto */
+.title-first {
+  font-family: "SimHei", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.title-second {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #dfdfdf;
+  margin: 0;                    /* 清掉 auto margin */
+}
+/* 通知列表保持不变... */
+
+
+/* 通知列表：3 行 2 列 */
+.info-notice-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+  gap: 0.75rem 1rem;      /* 行间距 0.75rem，列间距 1rem */
+  padding: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+/* 每个列表项统一宽度，且内部布局 */
+.left-notice-list-item {
+  background: rgb(241, 241, 241);
+  padding: 1.2rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+/* 1. 把 <a> 调成水平 flex 布局 */
+.left-notice-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.left-notice-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ccc; /* 竖线分隔 */
+    padding: 0.4rem 1rem;
+}
+
+.left-notice-time .date-top {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  color: black;
+  padding: 0.5rem 0rem;
+}
+
+.left-notice-time .date-bottom {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1;
+}
+
+
+/* 3. 文本块：左侧留空、右侧撑满剩余空间 */
+.left-notice-info {
+  flex: 1;                      /* 占据剩余空间 */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: rgb(51, 122, 183);
+  padding-left: 1rem;
+  margin: 0;                    /* 清除默认 margin */
+}
+
+/* 默认状态下的过渡 */
+.left-notice-list-item {
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+/* 悬浮时上浮 + 自定义背景/文字/时间颜色 */
+.left-notice-list-item.hovered {
+  transform: translateY(-5px);
+  background-color: rgb(28, 58, 133);  /* 比如改成 AliceBlue 背景 */
+}
+
+/* 如果你还想同时改文字和时间的颜色 */
+.left-notice-list-item.hovered .left-notice-info ,
+.left-notice-list-item.hovered .left-notice-time ,
+.left-notice-list-item.hovered .left-notice-time .date-top,
+.left-notice-list-item.hovered .left-notice-time .date-bottom {
+  color: #f0f0f0;             /* 深蓝色文字 */
+}

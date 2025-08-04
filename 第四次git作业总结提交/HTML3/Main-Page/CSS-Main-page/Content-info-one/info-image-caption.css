@@ -1,0 +1,259 @@
+/* ── 1. Title Bar: 工作动态 /NOTICE with lines and “更多” ─────────────── */
+
+.info-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+
+.info-title-name1 h1,
+.info-title-name2 h1 {
+  margin: 0;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.info-title-name1 h1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.info-title-name2 h1 {
+  font-weight: bold;
+  color: rgb(223, 223, 223);
+}
+
+.info-title-line {
+  width: 90px;
+  height: 2px;
+  background-color: #007bff;
+  display: inline-block;
+}
+
+.info-title-more {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* ── 2. 主体内容：左图 & 右列表 ─────────────────────────────── */
+
+.Content-info-one {
+  text-align: center;
+  padding: 3rem 20rem;
+}
+
+.Content-info-one > .info-images-slider,
+.Content-info-one > .info-caption-list {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+  box-sizing: border-box;
+}
+
+/* ── 2.1 左侧图片容器（无动画效果） ─────────────────────────── */
+.info-images-slider {
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* 保持你想要的高度 */
+}
+
+/* ←—— 这里改成绝对定位 ——→ */
+.slider-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 图片撑满容器 */
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* 平滑放大 */
+}
+
+/* 其它样式不变 */
+.slider-quarter-radius-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-bottom-right-radius: 50px;
+  background: url("../../../Utilties/images/t_p_2.png") no-repeat center center;
+  background-size: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+/*.slider-time {*/
+/*  position: absolute;*/
+/*  top: 6px;*/
+/*  left: 10px;*/
+/*  z-index: 3;*/
+/*  font-size: 0.85rem;*/
+/*  color: #fff;*/
+/*  font-weight: bold;*/
+/*  pointer-events: none;*/
+/*}*/
+
+.slider-time {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  padding-top: 6px;      /* 适当下移，让文字水平居中 */
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 1.1;      /* 控制两行文字间距 */
+  font-size: 1.1rem;    /* 适当调小，保证能显示完整 */
+  color: #fff;
+  font-weight: bold;
+  white-space: pre-line; /* 支持换行 */
+  z-index: 3;
+  pointer-events: none;
+}
+.slider-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: rgba(0, 123, 255, 0.5);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  text-align: left;
+  color: #fff;
+  font-size: 1rem;
+  z-index: 2;
+}
+.slider-comment{
+  font-size: 1.2rem;
+}
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.slider-prev { left: 0.5rem; }
+.slider-next { right: 0.5rem; }
+
+/* ── 2.2 右侧信息列表 ─────────────────────────────── */
+
+.info-caption-list {
+  text-align: left;
+}
+
+/* 整个列表的外壳：最顶部和最底部都画一条 */
+.info-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 每个项目只在底部画分隔线，但注意排除最后一行 */
+.info-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+  margin-left: 2rem;
+  /* 只有非最后一行才有下边框 */
+  border-bottom: 2px solid #ddd;
+}
+.info-list-item h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+  color: #000;
+}
+
+.info-list-item .info-list-item-time {
+  font-size: 0.8rem;
+  color: #888;
+  right: 0;
+}
+
+/* 覆盖所有链接状态的下划线 */
+.info-list-item a,
+.info-list-item a:link,
+.info-list-item a:visited,
+.info-list-item a:hover,
+.info-list-item a:active {
+  text-decoration: none !important;  /* 去掉下划线 */
+  color: #000 !important;            /* 纯黑色文字 */
+  font-weight: bold !important;      /* 加粗（“黑体”效果） */
+  font-family: "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 以下是鼠标悬浮浮起放大的效果 */
+.info-list-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.info-list-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-list-item:hover h1 {
+  transform: translateY(-2px) scale(1.03);
+  color: rgb(105, 124, 190);
+}
+
+/* ── 轮播指示器 ───────────────────────────────────────────── */
+
+.slider-indicators {
+  position: absolute;
+  bottom: 1rem;       /* 距离底部 0.5rem，正好在蓝色区域内 */
+  right: 2rem;          /* 距离右侧 1rem */
+  display: flex;
+  gap: 0.5rem;          /* 点与点之间间距 */
+  z-index: 4;
+}
+
+.slider-indicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background: #fff;
+  opacity: 0.3;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.slider-indicator.active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .Content-info-one {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .info-images-slider,
+  .info-caption-list {
+    aspect-ratio: unset;
+    width: 100%;
+    height: auto;
+  }
+}
+

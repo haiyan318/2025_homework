@@ -1,0 +1,76 @@
+ Git 常用命令总结
+
+仓库操作
+- 初始化仓库  
+  `git init`
+
+- 克隆远程仓库  
+  `git clone <仓库地址>`
+
+ 文件操作
+- 查看当前状态  
+  `git status`
+
+- 添加文件到暂存区  
+  `git add <文件名>`  
+  添加所有更改：`git add .`
+
+- 提交更改  
+  `git commit -m "提交说明"`
+
+- 查看提交历史  
+  `git log`
+
+远程操作
+- 查看远程仓库  
+  `git remote -v`
+
+- 添加远程仓库  
+  `git remote add origin <仓库地址>`
+
+- 推送到远程仓库  
+  `git push origin <分支名>`
+
+- 拉取远程仓库内容并合并到本地  
+  `git pull origin <分支名>`
+
+ 分支管理
+- 查看所有分支  
+  `git branch`
+
+- 创建新分支  
+  `git branch <分支名>`
+
+- 切换分支  
+  `git checkout <分支名>`
+
+- 创建并切换到新分支  
+  `git checkout -b <分支名>`
+
+- 合并分支  
+  `git merge <分支名>`
+
+- 删除分支  
+  `git branch -d <分支名>`
+
+ 撤销与回退
+- 撤销工作区修改（未 add 的）  
+  `git checkout -- <文件名>`
+
+- 撤销暂存区的修改（已 add，还未 commit 的）  
+  `git reset HEAD <文件名>`
+
+- 回退到某个提交  
+  `git reset --hard <提交ID>`
+
+- 查看文件变化  
+  `git diff`
+
+- 显示配置信息  
+  `git config --list`
+
+- 配置用户名邮箱  
+  `git config --global user.name "你的名字"`  
+  `git config --global user.email "你的邮箱"`
+
+
