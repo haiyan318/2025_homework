@@ -1,0 +1,349 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 顶部 */
+.header {
+	background: #F5AA02;
+	padding-left: 80px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header img {
+	height: 100px;
+	width: 400px;
+}
+
+.search-box {
+	position: relative;
+}
+
+.search-box input {
+	padding: 8px 30px 8px 15px;
+	border: 5px solid #0496B3;
+	border-radius: 15px;
+	width: 200px;
+}
+
+.search-box::after {
+	content: "搜索";
+	font-size: 15px;
+	color: #0496B3;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+/* 导航 */
+.nav {
+	display: flex;
+	justify-content: center;
+	padding: 12px 0;
+	width: 100%;
+	background-color: #01ACB7;
+
+}
+
+.nav-item {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 0 15px;
+	padding: 8px 12px;
+}
+
+.nav a {
+	text-decoration: none;
+}
+
+.dropdown-menu {
+	position: absolute;
+	background: white;
+	min-width: 180px;
+	display: none;
+	z-index: 100;
+}
+
+.dropdown-menu a {
+	background-color: #01ACB7;
+	color: white;
+	padding: 12px 20px;
+	display: block;
+}
+
+/* 轮播 */
+
+.carousel {
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+}
+
+.slides-container {
+	position: relative;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+	opacity: 1;
+}
+
+/* 按钮 */
+.prev-btn,
+.next-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000000;
+	color: white;
+	border: none;
+	padding: 15px;
+	font-size: 24px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+	background: #000000;
+}
+
+.prev-btn {
+	left: 20px;
+}
+
+.next-btn {
+	right: 20px;
+}
+
+/* 基础 */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 信息区通 */
+.info-section {
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 0 20px;
+}
+
+/* 上半部分 - 三列 */
+.top-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	margin-bottom: 40px;
+}
+
+/* 诗词 */
+.poem-box {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	min-height: 300px;
+}
+
+.poem-title {
+	color: #01ACB7;
+	font-size: 18px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.poem-title:hover {
+	color: #F5AA02;
+}
+
+.poem-content {
+	border-top: 1px solid #eee;
+	padding-top: 15px;
+	display: none;
+}
+
+.poem-content.active {
+	display: block;
+}
+
+.poem-date {
+	color: #999;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+/* 图片展示区 */
+.image-gallery {
+	position: relative;
+}
+
+.main-image {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+.thumbnail-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.thumbnail {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: transform 0.3s;
+	border: 2px solid transparent;
+}
+
+.thumbnail.active {
+	border-color: #F5AA02;
+}
+
+/* 下半部分布局 */
+.bottom-section {
+
+	gap: 30px;
+}
+
+/* 小轮播  */
+.mini-carousel {
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+}
+
+.mini-slides {
+	position: relative;
+	height: 100%;
+}
+
+.mini-slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.mini-slide.active {
+	opacity: 1;
+}
+
+/* 按钮 */
+.carousel-btn-prev-btn,
+.carousel-btn-next-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000000;
+	color: white;
+	border: none;
+	padding: 15px;
+	font-size: 24px;
+}
+
+.carousel-btn-prev-btn,
+.carousel-btn-next-btn:hover {
+	background: #000000;
+}
+
+.carousel-btn-prev-btn {
+	left: 20px;
+}
+
+.carousel-btn-next-btn {
+	right: 20px;
+}
+
+/* 放大 */
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	z-index: 1000;
+}
+
+.modal-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+}
+
+/* 底部 */
+.footer {
+	background: #F5AA02;
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.f-img {
+	width: 300px;
+	position: relative;
+	margin-left: 200px;
+}
+
+.contact-info {
+
+	font-size: 20px;
+	color: #333;
+	margin-right: 80px;
+	line-height: 1.8;
+	margin-bottom: 8px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+}
+
+.modal-content {
+	max-width: 80%;
+	max-height: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
