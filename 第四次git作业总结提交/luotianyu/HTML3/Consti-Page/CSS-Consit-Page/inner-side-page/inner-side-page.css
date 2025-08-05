@@ -1,0 +1,323 @@
+/*!* ========== 页面整体结构 ========== *!*/
+/*.inner-side-page {*/
+/*  display: flex;*/
+/*  min-height: 100vh;*/
+/*  font-family: "Microsoft YaHei", sans-serif;*/
+/*  background-color: #f9f9f9;*/
+/*}*/
+
+/*!* SVG 图标样式（建议宽高控制在合理范围） *!*/
+/*.icon-side-bar {*/
+/*  width: 18px;*/
+/*  height: 18px;*/
+/*  margin-right: 10px;*/
+/*  flex-shrink: 0;*/
+/*}*/
+/*!* ========== 左侧导航栏 ========== *!*/
+/*.inner-navi {*/
+/*  width: 220px;*/
+/*  background-color: #0b1f3a; !* 黑深蓝色 *!*/
+/*  color: white;*/
+/*  padding-top: 20px;*/
+/*}*/
+
+/*.side-bar-title {*/
+/*  text-align: center;*/
+/*  font-size: 20px;*/
+/*  font-weight: bold;*/
+/*  padding: 15px 0;*/
+/*  background-color: #0b1f3a;*/
+/*  border-bottom: 1px solid #1c2e4a;*/
+/*}*/
+
+/*.second-nav {*/
+/*  list-style: none;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*}*/
+
+/*!* 每个菜单项使用 flex 布局让图标与文字同行显示 *!*/
+/*.second-nav-item {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  padding: 12px 20px;*/
+/*  border-bottom: 1px solid #1c2e4a;*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+
+/*.second-navi-item-a {*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+/*  font-size: 16px;*/
+/*  line-height: 1;*/
+/*  display: inline-block;*/
+/*  padding: 12px 20px;*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.second-navi-item-a:hover {*/
+/*  background-color: #14375f;*/
+/*}*/
+
+/*!* ========== 右侧内容区域 ========== *!*/
+/*.inner-content-wrapper {*/
+/*  flex: 1;*/
+/*  padding: 20px 30px;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*!* Header区域 *!*/
+/*.content-title-bar {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  border-bottom: 2px solid #ccc;*/
+/*  padding-bottom: 10px;*/
+/*  margin-bottom: 20px;*/
+/*  white-space: nowrap;       !* 不换行 *!*/
+/*  overflow: hidden;          !* 防止溢出 *!*/
+/*}*/
+
+/*.content-title-bar-name {*/
+/*  font-size: 22px;*/
+/*  font-weight: bold;*/
+/*  color: #333;*/
+/*  margin-left: 10px; !* 与左边界保持适当距离 *!*/
+/*}*/
+
+/*.content-title-bar-items {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  font-size: 14px;*/
+/*  color: #666;*/
+/*  margin-right: 10px;*/
+/*  gap: 6px;                   !* 控制导航项间距 *!*/
+/*}*/
+/*.content-title-bar-items a {*/
+/*  color: #007bff;*/
+/*  text-decoration: none;*/
+/*  margin: 0 5px;*/
+/*}*/
+
+/*.content-title-bar-items a:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
+/*!* 内容信息区域 *!*/
+/*.content-info {*/
+/*  background-color: #fff;*/
+/*  padding: 25px;*/
+/*  border-radius: 8px;*/
+/*  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);*/
+/*}*/
+
+/*.content-info-header-title {*/
+/*  text-align: center;*/
+/*  font-size: 20px;*/
+/*  font-weight: bold;*/
+/*  color: #222;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.content-info-items-p {*/
+/*  font-size: 16px;*/
+/*  line-height: 1.8;*/
+/*  color: #444;*/
+/*  text-indent: 2em;*/
+/*}*/
+
+/*!* 4. 200% 缩放时隐藏 *!*/
+/*@media screen and (min-resolution: 2.5dppx) {*/
+/*  .inner-navi {*/
+/*    display: none !important;*/
+/*  }*/
+/*}*/
+/* ========== 页面整体结构 ========== */
+.inner-side-page {
+  display: flex;
+  align-items: flex-start;   /* 保证左右区域顶部对齐，但高度由内容撑开 */
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px 180px;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* ========== 左侧导航栏 ========== */
+.inner-navi {
+  width: 280px;
+  height: auto;
+  background-color:rgb(18, 56, 117); /* 深蓝背景不变 */
+  color: white;
+  padding-top: 10px;
+  flex-shrink: 0;
+  /*border-radius: 8px;*/
+  overflow: hidden;
+}
+
+.side-bar-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0;
+  background-color: rgb(18, 56, 117); /* 保持原有深蓝色 */
+  border-bottom: 1px solid rgb(18, 56, 117);
+}
+
+/* 左侧菜单列表 */
+.second-nav {
+  list-style: none;
+  margin: 0;
+  background-color: rgb(242, 242, 242); /* 灰色背景 */
+}
+
+/* 每个菜单项使用 flex 布局 */
+.second-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  background-color: rgb(242, 242, 242); /* 灰色背景 */
+}
+
+.second-nav-item:hover {
+  background-color: #d0d0d0;
+}
+
+/* 图标样式 */
+.icon-side-bar {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* 菜单文字 */
+.second-navi-item-a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.second-navi-item-a:hover {
+  color: #1677FF;
+}
+
+/* ========== 右侧内容区域 ========== */
+.inner-content-wrapper {
+  flex: 1;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background-color: rgb(242, 242, 242);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Header 区域 */
+.content-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content-title-bar-name {
+  font-size: 26px;
+  font-weight: bold;
+  color: rgb(25, 51, 115);
+  margin-left: 10px;
+}
+
+.content-title-bar-items {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+  gap: 6px;
+}
+
+.content-title-bar-items a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.content-title-bar-items a:hover {
+  text-decoration: underline;
+}
+
+/* 内容信息区域 */
+.content-info {
+  padding: 25px;
+}
+
+.content-info-header-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.content-info-items-p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #444;
+  text-indent: 2em;
+}
+
+.content-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-info-list-item {
+  display: flex;
+  align-items: center;   /* 垂直居中对齐 icon 和文本 */
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee; /* 可选的分隔线 */
+}
+
+.content-info-list-item-a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+}
+
+.icon-content-info {
+  width: 44px;    /* 控制 icon 大小 */
+  height: 44px;
+  margin-right: 0.5rem;
+  flex-shrink: 0; /* 避免被压缩变形 */
+}
+
+.content-info-list-item-p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.content-info-list-item-p:hover {
+  color: rgb(25, 51, 115);
+  text-decoration: none;
+  cursor: pointer;          /* 鼠标指针变为小手 */
+}
+
+/* ========== 高分辨率时隐藏左栏 ========== */
+@media screen and (min-resolution: 2.5dppx) {
+  .inner-navi {
+    display: none !important;
+  }
+}

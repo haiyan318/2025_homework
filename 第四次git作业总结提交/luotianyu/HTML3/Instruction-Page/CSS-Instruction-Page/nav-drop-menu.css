@@ -1,0 +1,108 @@
+.Navigation-Dropdown-Menu {
+  background-color: rgb(21, 80, 133);
+  text-align: center;
+  font-size: 1rem;        /* 根元素 1rem = 1vw */
+  padding: 0.1rem 0;
+}
+
+.Dropdown-Menu {
+  list-style: none;
+  display: inline-flex;   /* 横向居中 */
+  margin: 0;
+  padding: 0;
+  gap: 0.2rem;            /* 一级菜单间距 */
+}
+
+.Consti-Page-Navi-a{
+    position: relative;
+    padding: 0.8rem 1rem;
+    width: 10rem;           /* 224px */
+    height: 2.8rem;
+    font-size: 1.05rem;    /* 18px */
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 一级菜单：粗体、固定宽度、更宽一点 */
+.Dropdown-Menu > .nav-li {
+  position: relative;
+  padding: 0.8rem 1.5rem;
+  width: 9.5rem;           /* 224px */
+  height: 2.8rem;
+  font-size: 1.05rem;    /* 18px */
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  box-sizing: border-box;
+}
+
+/* 悬停变色 */
+.Dropdown-Menu > .nav-li:hover {
+  background-color: rgb(21, 80, 133);
+  color: #e0eaff;
+}
+
+/* 悬停底部天蓝色线条 */
+.Dropdown-Menu > .nav-li::after {
+  content: "";
+  position: absolute;
+  left: 1rem;             /* 与内边距对齐 */
+  right: 1rem;
+  bottom: 0.1rem;         /* 与 padding-bottom 对齐 */
+  height: 0;
+  background-color: skyblue;
+  transition: height 0.2s;
+}
+.Dropdown-Menu > .nav-li:hover::after {
+  height: 0.25rem;
+}
+
+/* 二级菜单：宽度与父项一致，无边框 */
+.nav-li .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.15rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(21, 80, 133);
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  width: 9.5rem;           /* 与 .nav-li 同宽 */
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.1);
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+/* 二级菜单项：粗体 */
+.nav-li .dropdown li {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;        /* 16px */
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+/* 二级悬停背景 */
+.nav-li .dropdown li:hover {
+  background-color: #0056b3;
+}
+
+/* 内嵌 <a> 链接全铺满 */
+.nav-li .dropdown li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4. 200% 缩放时隐藏 */
+@media screen and (min-resolution: 2.5dppx) {
+  .nav-bar-searchbtn {
+    display: none !important;
+  }
+}

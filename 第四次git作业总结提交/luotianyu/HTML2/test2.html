@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/nav1.css">
+    <link rel="stylesheet" href="css/nav2.css">
+    <link rel="stylesheet" href="css/image_roll.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/content1.css">
+    <link rel="stylesheet" href="css/content2.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/image_roll.js"></script>
+    <script src="js/content1.js"></script>
+    <script src="js/content2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <header class="top-bar">
+            <div class="logo"><img class = "logo_image" src="./images/logo.png" height="100px" width="auto"></div>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="搜索...">
+                <button type="submit" class="search-button">搜索</button>
+            </div>
+        </header>
+        <nav class="nav-bar">
+            <ul class="nav-ur">
+                <li class="nav-li">首页</li>
+                <li class="nav-li">中心简介
+                    <ul class="dropdown">
+                        <li>部分设置</li>
+                        <li>中心任务</li>
+                    </ul>
+                </li>
+                <li class="nav-li">中心动态
+                    <ul class="dropdown">
+                        <li>中心动态</li>
+                        <li>最新通知</li>
+                    </ul>
+                </li>
+                <li class="nav-li">教师培训
+                    <ul class="dropdown">
+                        <li>基础课程培训</li>
+                        <li>专业课程培训</li>
+                        <li>教学技能培训</li>
+                        <li>教学工作坊</li>
+                    </ul>
+                </li>
+                <li class="nav-li">教学研究
+                    <ul class="dropdown">
+                        <li>科研项目</li>
+                        <li>教学成果</li>
+                        <li>教学研讨会</li>
+                    </ul>
+                </li>
+                <li class="nav-li">资源中心
+                    <ul class="dropdown">
+                        <li>校内视频资源</li>
+                        <li>校外视频资源</li>
+                        <li>慕课资源</li>
+                        <li>其他资源</li>
+                    </ul>
+                </li>
+                <li class="nav-li">咨询服务
+                    <ul class="dropdown">
+                        <li>向我（LTY）大王咨询</li>
+                        <li>向蒟蒻咨询</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <img src="images/banner1.jpg" alt="图片1" />
+            <img src="images/banner2.jpg" alt="图片2" />
+            <img src="images/banner3.jpg" alt="图片3" />
+            <img src="images/banner4.jpg" alt="图片4" />
+          </div>
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+          <div class="carousel-dots"></div>
+        </div>
+
+    <div class="info-wrapper">
+        <section class="info-section">
+          <div class="info-tabs">
+            <button class="tab-btn active" data-tab="tab1">满江红·写怀</button>
+            <button class="tab-btn" data-tab="tab2">水调歌头</button>
+          </div>
+          <div class="info-content active" id="tab1">
+            <div class="info-item">
+                <span class="info-text">怒发冲冠，凭栏处，潇潇雨歇。</span>
+                <span class="info-time">2025-05-12</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">抬望眼，仰天长啸，壮怀激烈。</span>
+                <span class="info-time">2025-05-23</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">三十功名尘与土，八千里路云和月。</span>
+                <span class="info-time">2025-05-23</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">莫等闲，白了少年头，空悲切！</span>
+                <span class="info-time">2025-05-14</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">靖康耻，犹未雪。臣子恨，何时灭！</span>
+                <span class="info-time">2025-05-25</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">驾长车，踏破贺兰山缺。</span>
+                <span class="info-time">2025-05-16</span>
+            </div>
+          </div>
+          <div class="info-content" id="tab2" style="display: none;">
+            <div class="info-item">
+                <span class="info-text">明月几时有，把酒问青天。</span>
+                <span class="info-time">2025-05-12</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">不知天上宫阙，今夕是何年。</span>
+                <span class="info-time">2025-04-27</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span>
+                <span class="info-time">2025-01-15</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">起舞弄清影，何似在人间？</span>
+                <span class="info-time">2025-02-11</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">转朱阁，低绮户，照无眠。 </span>
+                <span class="info-time">2020-06-23</span>
+            </div>
+            <div class="info-item">
+                <span class="info-text">不应有恨，何事长向别时圆。</span>
+                <span class="info-time">2021-08-21</span>
+            </div>
+          </div>
+        </section>
+        <section class="info-right-gallery">
+            <div class="preview-large">
+              <img id="previewImage" src="./images/img1.jpg" alt="预览图">
+            </div>
+            <div class="thumbnail-row">
+              <img class="thumbnail active" src="./images/img1.jpg" data-src="img1.jpg">
+<!--                <div class="image-caption">第一次全体会议</div>-->
+              <img class="thumbnail" src="./images/img2.jpg" data-src="img2.jpg">
+<!--                <div class="image-caption">第二次全体会议</div>-->
+              <img class="thumbnail" src="./images/img3.jpg" data-src="img3.jpg">
+<!--                <div class="image-caption">第三次全体会议</div>-->
+              <img class="thumbnail" src="./images/img4.jpg" data-src="img4.jpg">
+<!--                <div class="image-caption">第四次全体会议</div>-->
+            </div>
+        </section>
+      <section class="poem-section">
+        <div class="accordion">
+          <button class="accordion-btn active">春晓</button>
+          <div class="accordion-content">
+            春眠不觉晓<br>
+            处处闻啼鸟<br>
+            夜来风雨声<br>
+            花落知多少
+          </div>
+
+          <button class="accordion-btn">夜雨寄北</button>
+          <div class="accordion-content">
+            君问归期未有期<br>
+            巴山夜雨涨秋池<br>
+            何当共剪西窗烛<br>
+            却话巴山夜雨时
+          </div>
+
+          <button class="accordion-btn">清明</button>
+          <div class="accordion-content">
+            清明时节雨纷纷<br>
+            路上行人欲断魂<br>
+            借问酒家何处有<br>
+            牧童遥指杏花村
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="gallery-wrapper">
+      <div class="gallery-left">
+        <div class="gallery-track" id="galleryTrack">
+          <img src="./images/1.jpg" alt="">
+          <img src="./images/2.jpg" alt="">
+          <img src="./images/3.jpg" alt="">
+          <img src="./images/4.jpg" alt="">
+          <img src="./images/5.jpg" alt="">
+          <img src="./images/6.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="gallery-right">
+        <div class="mini-image" data-src="./images/dog 1.jpg"></div>
+        <div class="mini-image" data-src="./images/dog 2.jpg"></div>
+        <div class="mini-image" data-src="./images/dog 3.jpg"></div>
+        <div class="mini-image" data-src="./images/dog 4.jpg"></div>
+      </div>
+
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-content">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img id="modalImage" src="" alt="预览图" />
+      </div>
+    </div>
+
+
+
+    <footer class="page-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="./images/up.png" alt="Logo" />
+        </div>
+        <div class="footer-text">
+          <p>联系电话:139****0322</p>
+          <p>银河系太阳系地球中国河南省开封市河南大学金明校区</p>
+          <p>技术支持:河南大学107宇宙级网站工作室</p>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

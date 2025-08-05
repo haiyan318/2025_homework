@@ -1,0 +1,53 @@
+/* ===== 1. 总体布局 ===== */
+.Content-info-two {
+  display: flex;
+  align-items: flex-start;    /* 顶部对齐，确保两侧标题在同一水平线 */
+  justify-content: center;
+  column-gap: 50px;           /* 固定左右区域间距 */
+  padding: 3rem 20rem;        /* 视需要自行调整 */
+  box-sizing: border-box;
+}
+
+.info-left-section {
+    flex: 2;                  /* 占比 2/3 */
+}
+
+.info-right-section {
+    flex: 1;                  /* 占比 1/3 */
+}
+
+/* 如果你希望左右两边内容内部也左右对齐，可以再加： */
+.info-left-section,
+.info-right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 1. 父容器响应式方向改为垂直排布 */
+@media (max-width: 1024px) {
+  .Content-info-two {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    row-gap: 2rem;
+  }
+
+  .info-left-section,
+  .info-right-section {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* 2. 保持右侧正方形区块不压扁 */
+.right-notice {
+  min-height: 300px;
+}
+
+/* 3. 每个 item 设置最小高度，替代 aspect-ratio */
+.right-notice-item {
+  min-height: 120px;
+  flex: 1 1 auto;
+  aspect-ratio: unset; /* 移除原来的强制比例 */
+}
+

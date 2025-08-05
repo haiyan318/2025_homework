@@ -1,0 +1,13 @@
+/* 清除浏览器默认边距 */
+/* 重要部分 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

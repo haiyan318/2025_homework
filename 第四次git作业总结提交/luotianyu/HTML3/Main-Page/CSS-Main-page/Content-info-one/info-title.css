@@ -1,0 +1,48 @@
+/*.info-title {*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  padding: 3rem 1rem 2rem 2rem;*/
+/*}*/
+
+/*!* 左右两条蓝线 *!*/
+/*.info-title-line {*/
+/*  display: block;*/
+/*  width: 7rem;           !* 根据你的横线图片长度调整 *!*/
+/*  height: 0.3rem;*/
+/*  margin: 0 0.5rem;      !* 紧靠文字 *!*/
+/*}*/
+
+/*!* “工作动态” *!*/
+/*.info-title-name1 h1 {*/
+/*  margin: 0;*/
+/*  font-size: 1.5rem;*/
+/*  font-weight: bold;*/
+/*  color: #000;*/
+/*}*/
+
+/*!* “/NOTICE” *!*/
+/*.info-title-name2 {*/
+/*  margin-left: 0.5rem;   !* 与前面文字分隔 *!*/
+/*}*/
+/*.info-title-name2 h1 {*/
+/*  margin: 0;*/
+/*  font-size: 1.5rem;*/
+/*  font-weight: bold;*/
+/*  color: rgb(223,223,223);           !* 灰色 *!*/
+/*}*/
+
+/*!* “更多” 链接，右下角 *!*/
+/*.info-title-more {*/
+/*  position: absolute;*/
+/*  bottom: 0.5rem;*/
+/*  right: 1rem;*/
+/*  font-size: 1rem;*/
+/*  font-weight: bold;*/
+/*  color: #000;*/
+/*  text-decoration: none;*/
+/*}*/
+/*.info-title-more span {*/
+/*  display: inline-block;*/
+/*}*/

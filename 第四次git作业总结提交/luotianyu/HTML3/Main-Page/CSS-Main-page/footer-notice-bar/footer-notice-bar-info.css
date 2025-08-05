@@ -1,0 +1,49 @@
+/* 整个 footer 区域 */
+.footer-notice-bar {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  font-family: "微软雅黑", sans-serif;
+}
+
+/* 背景图片：宽度全屏，高度自适应 */
+.footer-notice-bar-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 文本容器 */
+.footer-notice-bar-info {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  color: #ffffff; /* 默认字体颜色为白，可自定义 */
+  text-align: left;
+  z-index: 2;
+}
+
+/* 每行文字单独占一行，禁止换行 */
+.footer-notice-nar-info-item {
+  margin: 5px 0;
+  font-size: 14px; /* 可自定义字体大小 */
+  max-font-size: 18px;
+  min-font-size: 18px;
+  line-height: 1.6;
+  white-space: nowrap;       /* 禁止换行 */
+  overflow: hidden;          /* 超出隐藏 */
+  text-overflow: ellipsis;   /* 末尾显示省略号 */
+}
+
+/* 遮罩层：蓝色微透明矩形 */
+.footer-notice-bar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 51, 100, 0.45); /* 蓝色，alpha 45% */
+  z-index: 1;
+  pointer-events: none; /* 确保遮罩不会阻止文字交互 */
+}
