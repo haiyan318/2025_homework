@@ -1,0 +1,11 @@
+#忽略全部
+/*
+# 一下目录除外
+!wanghaobo1/
+!wanghaobo2/
+!wanghaobo3/
+# 上面三个目录内还有目录需要重新关注
+!wanghaobo1/*
+!wanghaobo2/*
+!wanghaobo3/*
+!Git.doc
