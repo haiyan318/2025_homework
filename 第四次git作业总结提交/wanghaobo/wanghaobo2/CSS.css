@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*head_begin*/
+.head {
+    width: 100%;
+    height: 140px;
+    background-color: #f9a600;
+}
+
+.head .w {
+    position: relative;
+    width: 1290px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.head .w .logo1 {
+    width: 40%;
+    height: 80%;
+
+    position: absolute;
+    left: 0;
+    top: 10%;
+    background-image: url(./pictures/logo.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.head .w .search {
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.head .w .search .form {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    border: 3px solid #00b7b6;
+    border-radius: 50px;
+    right: 20%;
+    top: 10%;
+    border-color: none;
+}
+
+.head .w .search .form .s {
+    width: 70%;
+    height: 90%;
+    top: 5%;
+    right: 5%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: transparent;
+    font-size: 15px;
+    outline: none;
+}
+
+.form button {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: auto;
+    background-color: #00b3b6;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: large;
+    color: aliceblue
+}
+
+.form button:hover {
+    background-color: aquamarine;
+}
+
+.head .w .search .form .s:focus {
+    background-color: aliceblue;
+}
+
+/*head_over*/
+/*toubudaohang*/
+.guide {
+    width: 100%;
+    height: 70px;
+    position: relative;
+    z-index: 2;
+    background-color: #01b4b9;
+}
+
+.guide li {
+    list-style-type: none;
+}
+
+.guide .list {
+    display: flex;
+    transform: translate(20%, 0);
+}
+
+.guide li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.guide li a:hover {
+    background-color: #f66700;
+}
+
+.l {
+    float: left;
+    width: 120px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.droplist {
+    background-color: #01b4b9;
+    display: none;
+
+}
+
+.l:hover .droplist {
+    display: block;
+}
+
+.droplist li {
+    border: 1px solid black;
+}
+
+/*toubudaohang_over*/
+/*picture*/
+.picture {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.images {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.img {
+    width: 20%;
+    background-size: cover;
+}
+
+.img:nth-child(1) {
+    background-image: url("pictures/banner1.jpg");
+}
+
+.img:nth-child(2) {
+    background-image: url("pictures/banner2.jpg");
+}
+
+.img:nth-child(3) {
+    background-image: url("pictures/banner3.jpg");
+}
+
+.img:nth-child(4) {
+    background-image: url("pictures/banner4.jpg");
+}
+
+.min {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 40px;
+    width: 30%;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.m {
+    width: 50px;
+    height: 15px;
+    cursor: pointer;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    background-color: #858377;
+    list-style-type: none;
+}
+
+.m:active {
+    background-color: #f9a600;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.button-left,
+.button-right {
+    font-size: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 500px;
+    color: #fcfdfa;
+}
+
+.poem {
+    width: 500px;
+    height: 400px;
+    border: 1px solid black;
+    transform: translate(55%, 25%);
+    position: relative;
+}
+
+.poem .h {
+    width: 100%;
+    height: 60px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.h .ti-first {
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    background-color: #f9a600;
+    color: #fcfdfa;
+}
+
+.h .ti-second {
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    background-color: #f9a600;
+    color: #fcfdfa;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.poem ul {
+  padding: 20px; 
+}
+
+.poem li {
+  list-style-type: none;
+  margin-top: 25px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-bottom: 1px solid #eee; 
+}
+
+.poem li a {
+  text-decoration: none;
+  color: black;
+}
+.poem li a:hover{
+    color: red;
+}
+/*picture_over*/
+.butt{
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid black;
+    transform: translateY(200%);
+    background-color: #f9a600;
+}
+.butt .p{
+    width: 40%;
+    height: 80%;
+
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    background-image: url(./pictures/up.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.ph .lxfs{
+    position: absolute;
+    right: 400px;
+    top: 80px;
+}
+.lxfs li{
+    list-style-type: none;
+    line-height: 50px;
+}
