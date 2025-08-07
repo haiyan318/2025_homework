@@ -1,0 +1,441 @@
+/* 并列布局 */
+.tworow {
+	display: flex;
+	gap: 10px;
+	margin: 0 0 30px 0;
+}
+
+.onerow {
+	margin: 0 0 30px 0;
+}
+
+.tworow2 {
+	flex: 2;
+}
+
+.tworow1 {
+	flex: 1;
+}
+
+.tworow .section {
+	margin-bottom: 0;
+}
+
+/*样式*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+
+body {
+	background-color: #f5f5f5;
+	color: #333;
+	line-height: 1.6;
+}
+/*返顶样式*/
+.backtotop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #333;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	z-index: 999;
+}
+
+/* 头部 */
+.header {
+	width: 100%;
+	background: url(images/top.png) no-repeat center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 142px;
+}
+
+.background {
+	width: 100%;
+	height: 100%;
+	background: rgba(4, 42, 89, 0.7);
+}
+
+.head {
+	float: right;
+	margin-right: 242px;
+	margin-top: 35px;
+}
+
+.logo1 {
+	margin-top: 25px;
+	float: left;
+	text-align: left;
+	width: 630px;
+	height: 98px;
+	margin-left: 130px;
+}
+
+.logo1 img {
+	display: block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+.logo1 span {
+	display: block;
+	margin-left: 15px;
+	padding-left: 15px;
+	border-left: 1px solid #fff;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 18px;
+	padding: 8px 20px;
+	position: relative;
+}
+
+.searchbox {
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	width: 240px;
+	background: #fff;
+	margin-top: 10px;
+}
+
+.searchbox .btn {
+	width: 40px;
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	background: url(images/ss_btn.png) no-repeat center center #084181;
+	padding-left: 30px;
+	font-size: 18px;
+	cursor: pointer;
+	color: #fff;
+}
+
+/* 导航 */
+.nav {
+	display: flex;
+	justify-content: center;
+	padding: 12px 0;
+	width: 100%;
+	background-color: #155085;
+}
+
+.nav-item {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	margin: 0 15px;
+	padding: 8px 12px;
+}
+
+.nav a {
+	text-decoration: none;
+}
+
+.dropdown-menu {
+	position: absolute;
+	background: white;
+	min-width: 180px;
+	display: none;
+	z-index: 100;
+}
+
+.dropdown-menu a {
+	background-color: #155085;
+	color: white;
+	padding: 12px 20px;
+	display: block;
+}
+
+/* 轮播图 */
+.carousel {
+	position: relative;
+
+	min-height: 400px;
+	overflow: hidden;
+}
+
+.slides-container {
+	margin-top: 10px;
+	height: 100%;
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+	opacity: 1;
+}
+
+/* 轮播控制按钮 */
+.prev-btn,
+.next-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #000000;
+	color: white;
+	border: none;
+	padding: 15px;
+	font-size: 24px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+	background: #000000;
+}
+
+.prev-btn {
+	left: 20px;
+}
+
+.next-btn {
+	right: 20px;
+}
+
+/* 工作动态 */
+.section {
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.section-header {
+	background-color: #155085;
+	color: #fff;
+	padding: 15px 25px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.section-content {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+
+.section-content1 {
+	padding-bottom: 8px;
+	padding-left: 23px;
+	padding-right: 20px;
+}
+
+/* 新闻列表 */
+.news-list {
+	list-style: none;
+}
+
+.news-item {
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+	border-bottom: none;
+}
+
+.news-date {
+	color: #7f8c8d;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.news-title {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+.news-title:hover {
+	color: #155085;
+}
+
+.more-link {
+	float: right;
+	color: #0f3b62;
+	text-decoration: none;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+/* 指南链接 */
+.guide-links {
+	display: flex;
+	gap: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	justify-content: center;
+}
+
+.guide-link {
+	background-color: #f9f9f9;
+	padding: 10px 15px;
+	border-radius: 4px;
+	color: #333;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	transition: all 0.3s;
+}
+
+/* 平台标题 */
+.platforms-title {
+	margin-top: 20px;
+	font-size: 16px;
+	color: #333;
+}
+
+.platforms {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	margin-top: 20px;
+	padding: 10px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.platform-item {
+	background-color: #f9f9f9;
+	padding: 15px;
+	border-radius: 5px;
+	transition: transform 0.3s, box-shadow 0.3s;
+	text-align: center;
+}
+
+.platform-item:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.platform-title {
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.platform-image {
+	height: 120px;
+	object-fit: cover;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.platform-link {
+	color: #333;
+	text-decoration: none;
+}
+
+
+/* 规章制度和下载中心列表 */
+.regulations-list,
+.download-list {
+	list-style: none;
+	margin-top: 15px;
+}
+
+.regulations-item,
+.download-item {
+	padding: 10px 0;
+	border-bottom: 1px dashed #eee;
+}
+
+.regulations-item:last-child,
+.download-item:last-child {
+	border-bottom: none;
+}
+
+.regulations-link,
+.download-link {
+	color: #333;
+	text-decoration: none;
+}
+
+.regulations-link:hover,
+.download-link:hover {
+	text-decoration: none;
+}
+
+/* 友情链接 */
+.link {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	background-color: rgb(4, 42, 89);
+	border-bottom: black solid 1px;
+}
+
+.link2 {
+	max-width: 1600px;
+	height: 47px;
+	margin: 0 auto;
+}
+
+.link2 li {
+	display: inline-block;
+	width: 14%;
+	height: 100%;
+	text-decoration: none;
+}
+
+.link2 li a {
+	font-family: '宋体';
+	display: inline-block;
+	text-decoration: none;
+	height: 47px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	line-height: 47px;
+	font-size: 20px;
+}
+
+/* 页脚 */
+.foot {
+	height: 210px;
+	width: 100%;
+	background: url(images/foot2.jpg) no-repeat top;
+}
+
+.footer {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(4, 42, 89, 0.7);
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.information {
+	position: absolute;
+	left: 17%;
+	width: 33.333%;
+	padding-top: 10px;
+}
+
+.information p {
+	color: #fff;
+	line-height: 24px;
+	font-size: 16px;
+}
