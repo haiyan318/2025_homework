@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+  .col-md-4[aos] {
+    /* 禁用<element class="col-md-4" aos>中的AOS动画 */
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
